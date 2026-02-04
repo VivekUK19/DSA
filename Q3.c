@@ -1,0 +1,42 @@
+/*Problem: Implement linear search to find key k in an array. Count and display the number of comparisons performed.
+
+Input:
+- First line: integer n (array size)
+- Second line: n space-separated integers
+- Third line: integer k (key to search)
+
+Output:
+- Line 1: "Found at index i" OR "Not Found"
+Line 2: "Comparisons = c"
+
+Example:
+Input:
+5
+10 20 30 40 50
+30
+
+Output:
+Found at index 2
+Comparisons = 3*/
+#include<stdio.h>
+#include<stdlib.h>
+int main(){
+    int i,target,n;
+    int arr[100];
+    printf("Enter the number of the elements: ");
+    scanf("%d",&n);
+    printf("Enter the %d element of the array: ");
+    for(i=0;i<n;i++){
+        scanf("%d",&arr[i]);
+    }
+    printf("Enter the target element: ");
+    scanf("%d",&target);
+    for(i=0;i<n;i++){
+        if(arr[i]==target){
+            printf("Found at the index %d \n",i);
+            printf("Comparisons = %d",i+1);
+            exit(0);
+        }
+    }
+    printf("Not Found.");
+}
